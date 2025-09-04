@@ -17,12 +17,11 @@ class CustomException(Exception):
         self.error_message = error_message_detail(error_message, error_detail=error_detail)
 
     def __str__(self):
+        logging.info(self.error_message)
         return self.error_message
     
 if __name__=="__main__":
     try:
         a=1/0
     except Exception as e:
-        error_message = CustomException(e,sys)
-        logging.info(error_message)
-        print(error_message)
+        raise CustomException(e,sys)
