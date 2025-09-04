@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Score Predictor FLask App</title>
+    <style>
+        body {
+            background-image: url("{{url_for('static', filename='exam.jpg')}}");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+            text-align:center;
+            line-height: 1.8;
+            color: brown;
+        }
+
+        div {
+            background-color: rgb(255, 233, 123);
+            bottom: 30;
+            right: 30;
+            width:50%;
+            margin:auto;
+            border-radius: 10px;
+            box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        label {
+            font-size: 20px;
+            display: inline-block;
+            width: 60%;
+            text-align:left;
+            font-weight: bold;
+        }
+
+        input {
+            font-size: 15px;
+            display: inline-block;
+            width: 60%;
+            text-align:left;
+            margin-bottom: 15px;
+        }
+
+        select {
+            font-size: 15px;
+            display: inline-block;
+            width: 60%;
+            text-align:left;
+            margin-bottom: 15px;
+        }
+
+        .button {
+            background-color: brown;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 4px;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+    <h1 style="font-size: 40px;">Student Exam Performance Prediction</h1>
+    <form action="/predict" method="post" autocomplete="off">
+        <label for="gender">Gender</label>
+            <select name="gender" placeholder="Enter you Gender" required>
+                <option selected disabled value="">Select your Gender</option>
+                <option value="male">
+                    Male
+                </option>
+                <option value="female">
+                    Female
+                </option>
+            </select><br>
+        <label for="ethnicity">Race or Ethnicity</label>
+            <select name="ethnicity" placeholder="Enter you ethnicity" required>
+                <option selected disabled value="">Select Ethnicity</option>
+                <option value="group A">
+                    Group A
+                </option>
+                <option value="group B">
+                    Group B
+                </option>
+                <option value="group C">
+                    Group C
+                </option>
+                <option value="group D">
+                    Group D
+                </option>
+                <option value="group E">
+                    Group E
+                </option>
+            </select><br>
+        <label for="parental_level_of_education">Parental Level of Education</label>
+            <select name="parental_level_of_education" placeholder="Enter you Parent Education" required>
+                <option selected disabled value="">Select Parent Education</option>
+                <option value="associate's degree">
+                    associate's degree
+                </option>
+                <option value="bachelor's degree">
+                    bachelor's degree
+                </option>
+                <option value="high school">
+                    high school
+                </option>
+                <option value="master's degree">
+                    master's degree
+                </option>
+                <option value="some college">
+                    some college
+                </option>
+                <option value="some high school">
+                    some high school
+                </option>
+            </select><br>
+        <label for="lunch">Lunch Type</label>
+            <select name="lunch" placeholder="Enter you Lunch" required>
+                <option selected disabled value="">Select Lunch Type</option>
+                <option value="free/reduced">
+                    free/reduced
+                </option>
+                <option value="standard">
+                    standard
+                </option>
+            </select><br>
+        <label for="test_preparation_course">Test preparation Course</label>
+            <select name="test_preparation_course" placeholder="Enter you Course"
+                required>
+                <option selected disabled value="">Select Test_course</option>
+                <option value="none">
+                    None
+                </option>
+                <option value="completed">
+                    Completed
+                </option>
+            </select><br>
+        <label for="writing_score">Writing Score out of 100</label>
+            <input type="number" name="reading_score" placeholder="Enter your Reading score" min='0' max='100' /><br>
+        <label for="reading_score">Reading Score out of 100</label>
+            <input type="number" name="writing_score" placeholder="Enter your Reading Score" min='0' max='100' /><br>
+        <input type="submit" class="button" value="Predict Maths Score" required />
+    </form>
+    </div>
+</body>
+</html>
