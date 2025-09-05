@@ -2,8 +2,7 @@ from flask import Flask, request, render_template
 from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 from src.logger import logging
 
-application = Flask(__name__)
-app = application
+app = Flask(__name__)
 
 @app.route('/', methods=["GET"])
 def index():
