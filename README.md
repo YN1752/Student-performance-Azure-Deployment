@@ -1,4 +1,4 @@
-# Machine Learning Project with Deployment
+# Machine Learning Project with Azure Deployment
 - This project was about understanding the usage of Docker images and Azure deployment.
 - An ML training pipeline was created which runs codes from Data Ingestion, Data Transformation, Hyperparameter tuning and training.
 - Predict pipeline was created that retrieves preprocessor and model object, transforms input data, performs prediction.
@@ -7,4 +7,4 @@
 - Docker image was created and pushed into the container registry.
 - Web app was created by connecting it with docker registry.
 
-Link: https://studentperformance1752-gng5g3g3b2cbhhdq.eastus-01.azurewebsites.net/
+Web app Link: https://studentperformance1752-gng5g3g3b2cbhhdq.eastus-01.azurewebsites.net/
